@@ -4,17 +4,48 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+
+    <style>
+      body {
+        background-color: #001100;
+        color: #d3d3d3;
+      }
+
+      button {
+        background-color: #333333;
+        color: #d3d3d3;
+        border-radius: 5px;
+      }
+
+      #reverseDiv {
+        border-radius: 5px;
+        padding: 5px;
+        background-color: #516c6a;
+      }
+
+      #multDiv {
+        border-radius: 5px;
+        padding: 5px;
+        background-color: #516c6a;
+      }
+    </style>
   </head>
   <body>
-    <h2>JavaScript Array Sort Reverse</h2>
+    <div id="reverseDiv">
+      <h2>JavaScript Array Sort Reverse</h2>
 
-    <button onclick="sortfunction()">Sort Me</button>
-    <button onclick="reversefunction()">Reverse Me</button>
+      <button onclick="sortfunction()">Sort Me</button>
+      <button onclick="reversefunction()">Reverse Me</button>
 
-    <p id="result"></p>
+      <p id="result"></p>
+    </div>
 
-    <h3>Multiply every element in the array with 10</h3>
-    <p id="product_value"></p>
+    <br />
+
+    <div id="multDiv">
+      <h3>Multiply every element in the array with 10</h3>
+      <p id="product_value"></p>
+    </div>
 
     <script>
       var fruits = [
@@ -41,12 +72,11 @@
       var numbers = [15, 67, 82, 47635, 612];
 
       function myFunction(num) {
-        return num * 10;
+        return num * num;
       }
 
       var newarray = numbers.map(myFunction);
-      document.getElementById("product_value").innerHTML =
-        newarray.join(" ┌( ಠ_ಠ)┘ ");
+      document.getElementById("product_value").innerHTML = newarray.join(" • ");
     </script>
   </body>
 </html>
